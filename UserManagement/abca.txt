@@ -1,0 +1,32 @@
+list of custom class objects from a method?
+
+define a simple class in C# to represent a contact with Name, Age, and Rank?
+
+public class def{
+    string name;
+	int Age;
+	int Rank;
+	def()
+	{
+		name="abc";
+		age=18;
+		Rank=1;
+	}
+}
+
+    export namespace Utilities.Popup {
+        export function showVirusScanProgessPopup(content: string, options: any) {
+            let $okButton = createButton(ICM.MessageLocal.OkLabel, function (e: any): void {
+                closePopup($popupDiv);
+                options.okButtonClicked();
+            }, true);
+
+            $okButton.attr('data-bind', 'enabled: isChecked');
+
+            let $popupDiv = createPopupTemplate('popupVirusScan', content, [$okButton], createCloseButton(null));
+            $popupDiv.removeClass().addClass('popup_block confBox commitmentslabels modal fade in');
+
+            showPopup($popupDiv);
+            kendo.bind($popupDiv, options);
+        }
+    }
