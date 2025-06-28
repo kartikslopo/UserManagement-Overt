@@ -1,0 +1,178 @@
+[2025-06-28 03:04:19.324 +05:30 INF]  Starting UserManagement API application
+[2025-06-28 03:04:19.409 +05:30 INF]  Running in Development mode - Swagger enabled
+[2025-06-28 03:04:19.795 +05:30 INF]  Setting up initial admin user...
+[2025-06-28 03:04:19.805 +05:30 INF] UserManagement.API.Data.Repositories.UserManagementRepository Retrieving user by username: admin@example.com
+[2025-06-28 03:04:19.865 +05:30 DBG] UserManagement.API.Data.SqlDataAccess Executing query: SELECT * FROM Users WHERE Username = 'admin@example.com'
+[2025-06-28 03:04:20.256 +05:30 DBG] UserManagement.API.Data.SqlDataAccess Query executed successfully, returned 1 rows
+[2025-06-28 03:04:20.262 +05:30 INF] UserManagement.API.Data.Repositories.UserManagementRepository User found by username: admin@example.com, ID: 1
+[2025-06-28 03:04:20.265 +05:30 INF]  Admin user already exists: admin@example.com
+[2025-06-28 03:04:20.267 +05:30 INF]  UserManagement API started successfully
+[2025-06-28 03:04:21.046 +05:30 INF] Microsoft.Hosting.Lifetime Now listening on: https://localhost:7221
+[2025-06-28 03:04:21.049 +05:30 INF] Microsoft.Hosting.Lifetime Now listening on: http://localhost:5012
+[2025-06-28 03:04:21.051 +05:30 INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+[2025-06-28 03:04:21.052 +05:30 INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+[2025-06-28 03:04:21.053 +05:30 INF] Microsoft.Hosting.Lifetime Content root path: C:\TFS\UserManagement\UserManagement\UserManagement
+[2025-06-28 03:04:24.483 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware Handled GET /swagger/index.html responded 200 in 117.7212 ms
+[2025-06-28 03:04:24.718 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware Handled GET /swagger/v1/swagger.json responded 200 in 89.4158 ms
+[2025-06-28 03:04:54.704 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware Handled OPTIONS /api/user/login responded 204 in 5.0354 ms
+[2025-06-28 03:04:55.251 +05:30 INF] UserManagement.API.Controllers.UserController Login attempt for username: kartik@gmail.com
+[2025-06-28 03:04:55.256 +05:30 INF] UserManagement.API.Data.Repositories.UserManagementRepository Validating user credentials for username: kartik@gmail.com
+[2025-06-28 03:04:55.259 +05:30 INF] UserManagement.API.Data.Repositories.UserManagementRepository Retrieving user by username: kartik@gmail.com
+[2025-06-28 03:04:55.262 +05:30 DBG] UserManagement.API.Data.SqlDataAccess Executing query: SELECT * FROM Users WHERE Username = 'kartik@gmail.com'
+[2025-06-28 03:04:55.317 +05:30 DBG] UserManagement.API.Data.SqlDataAccess Query executed successfully, returned 1 rows
+[2025-06-28 03:04:55.319 +05:30 INF] UserManagement.API.Data.Repositories.UserManagementRepository User found by username: kartik@gmail.com, ID: 2
+[2025-06-28 03:04:55.856 +05:30 INF] UserManagement.API.Data.Repositories.UserManagementRepository User credentials validated successfully: kartik@gmail.com
+[2025-06-28 03:04:55.862 +05:30 INF] UserManagement.API.Services.TokenService Generating JWT token for user: kartik@gmail.com, Role: Viewer
+[2025-06-28 03:04:55.933 +05:30 INF] UserManagement.API.Services.TokenService JWT token generated successfully for user: kartik@gmail.com
+[2025-06-28 03:04:55.935 +05:30 INF] UserManagement.API.Controllers.UserController Successful login for username: kartik@gmail.com, Role: Viewer
+[2025-06-28 03:04:55.978 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware Handled POST /api/user/login responded 200 in 1233.6914 ms
+[2025-06-28 03:04:56.069 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware Handled OPTIONS /api/user/paginated responded 204 in 0.7491 ms
+[2025-06-28 03:04:56.080 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware Handled OPTIONS /api/user/paginated responded 204 in 0.1774 ms
+[2025-06-28 03:04:56.199 +05:30 INF] UserManagement.API.Controllers.UserController GetUsers paginated requested by user: kartik@gmail.com, Page: 1, PageSize: 10, SearchTerm: null
+[2025-06-28 03:04:56.204 +05:30 INF] UserManagement.API.Data.Repositories.UserManagementRepository Retrieving paginated users: Page 1, PageSize 10, SearchTerm: null, SortBy: Id
+[2025-06-28 03:04:56.208 +05:30 DBG] UserManagement.API.Data.SqlDataAccess Executing single value query: SELECT COUNT(*) FROM Users 
+[2025-06-28 03:04:56.268 +05:30 DBG] UserManagement.API.Data.SqlDataAccess Single value query executed successfully, result: 13
+[2025-06-28 03:04:56.271 +05:30 DBG] UserManagement.API.Data.SqlDataAccess Executing query: 
+                    SELECT * FROM Users 
+                    
+                    ORDER BY Id ASC
+                    OFFSET 0 ROWS
+                    FETCH NEXT 10 ROWS ONLY
+[2025-06-28 03:04:56.315 +05:30 DBG] UserManagement.API.Data.SqlDataAccess Query executed successfully, returned 10 rows
+[2025-06-28 03:04:56.318 +05:30 INF] UserManagement.API.Data.Repositories.UserManagementRepository Retrieved 10 users out of 13 total (Page 1 of 2)
+[2025-06-28 03:04:56.323 +05:30 INF] UserManagement.API.Controllers.UserController Retrieved 10 users (Page 1 of 2) for user: kartik@gmail.com
+[2025-06-28 03:04:56.347 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware Handled GET /api/user/paginated responded 200 in 266.9173 ms
+[2025-06-28 03:04:56.372 +05:30 INF] UserManagement.API.Controllers.UserController GetUsers paginated requested by user: kartik@gmail.com, Page: 1, PageSize: 10, SearchTerm: null
+[2025-06-28 03:04:56.375 +05:30 INF] UserManagement.API.Data.Repositories.UserManagementRepository Retrieving paginated users: Page 1, PageSize 10, SearchTerm: null, SortBy: Id
+[2025-06-28 03:04:56.378 +05:30 DBG] UserManagement.API.Data.SqlDataAccess Executing single value query: SELECT COUNT(*) FROM Users 
+[2025-06-28 03:04:56.398 +05:30 DBG] UserManagement.API.Data.SqlDataAccess Single value query executed successfully, result: 13
+[2025-06-28 03:04:56.399 +05:30 DBG] UserManagement.API.Data.SqlDataAccess Executing query: 
+                    SELECT * FROM Users 
+                    
+                    ORDER BY Id ASC
+                    OFFSET 0 ROWS
+                    FETCH NEXT 10 ROWS ONLY
+[2025-06-28 03:04:56.415 +05:30 DBG] UserManagement.API.Data.SqlDataAccess Query executed successfully, returned 10 rows
+[2025-06-28 03:04:56.416 +05:30 INF] UserManagement.API.Data.Repositories.UserManagementRepository Retrieved 10 users out of 13 total (Page 1 of 2)
+[2025-06-28 03:04:56.418 +05:30 INF] UserManagement.API.Controllers.UserController Retrieved 10 users (Page 1 of 2) for user: kartik@gmail.com
+[2025-06-28 03:04:56.421 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware Handled GET /api/user/paginated responded 200 in 73.2624 ms
+[2025-06-28 03:04:56.601 +05:30 INF] UserManagement.API.Controllers.UserController GetUsers paginated requested by user: kartik@gmail.com, Page: 1, PageSize: 10, SearchTerm: null
+[2025-06-28 03:04:56.604 +05:30 INF] UserManagement.API.Data.Repositories.UserManagementRepository Retrieving paginated users: Page 1, PageSize 10, SearchTerm: null, SortBy: Id
+[2025-06-28 03:04:56.607 +05:30 DBG] UserManagement.API.Data.SqlDataAccess Executing single value query: SELECT COUNT(*) FROM Users 
+[2025-06-28 03:04:56.633 +05:30 DBG] UserManagement.API.Data.SqlDataAccess Single value query executed successfully, result: 13
+[2025-06-28 03:04:56.635 +05:30 DBG] UserManagement.API.Data.SqlDataAccess Executing query: 
+                    SELECT * FROM Users 
+                    
+                    ORDER BY Id ASC
+                    OFFSET 0 ROWS
+                    FETCH NEXT 10 ROWS ONLY
+[2025-06-28 03:04:56.657 +05:30 DBG] UserManagement.API.Data.SqlDataAccess Query executed successfully, returned 10 rows
+[2025-06-28 03:04:56.660 +05:30 INF] UserManagement.API.Data.Repositories.UserManagementRepository Retrieved 10 users out of 13 total (Page 1 of 2)
+[2025-06-28 03:04:56.665 +05:30 INF] UserManagement.API.Controllers.UserController Retrieved 10 users (Page 1 of 2) for user: kartik@gmail.com
+[2025-06-28 03:04:56.667 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware Handled GET /api/user/paginated responded 200 in 83.1723 ms
+[2025-06-28 11:15:47.432 +05:30 INF]  Starting UserManagement API application
+[2025-06-28 11:15:47.519 +05:30 INF]  Running in Development mode - Swagger enabled
+[2025-06-28 11:15:48.091 +05:30 INF]  Setting up initial admin user...
+[2025-06-28 11:15:48.104 +05:30 INF] UserManagement.API.Data.Repositories.UserManagementRepository Retrieving user by username: admin@example.com
+[2025-06-28 11:15:48.171 +05:30 DBG] UserManagement.API.Data.SqlDataAccess Executing query: SELECT * FROM Users WHERE Username = 'admin@example.com'
+[2025-06-28 11:15:48.659 +05:30 DBG] UserManagement.API.Data.SqlDataAccess Query executed successfully, returned 1 rows
+[2025-06-28 11:15:48.665 +05:30 INF] UserManagement.API.Data.Repositories.UserManagementRepository User found by username: admin@example.com, ID: 1
+[2025-06-28 11:15:48.671 +05:30 INF]  Admin user already exists: admin@example.com
+[2025-06-28 11:15:48.674 +05:30 INF]  UserManagement API started successfully
+[2025-06-28 11:15:49.579 +05:30 INF] Microsoft.Hosting.Lifetime Now listening on: https://localhost:7221
+[2025-06-28 11:15:49.583 +05:30 INF] Microsoft.Hosting.Lifetime Now listening on: http://localhost:5012
+[2025-06-28 11:15:49.586 +05:30 INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+[2025-06-28 11:15:49.588 +05:30 INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+[2025-06-28 11:15:49.591 +05:30 INF] Microsoft.Hosting.Lifetime Content root path: C:\TFS\UserManagement\UserManagement\UserManagement
+[2025-06-28 11:15:54.493 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware Handled GET /swagger/index.html responded 200 in 137.8379 ms
+[2025-06-28 11:15:54.808 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware Handled GET /swagger/v1/swagger.json responded 200 in 130.8952 ms
+[2025-06-28 11:17:27.140 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware Handled OPTIONS /api/user/login responded 204 in 5.2898 ms
+[2025-06-28 11:17:27.445 +05:30 INF] UserManagement.API.Controllers.UserController Login attempt for username: admin@example.com
+[2025-06-28 11:17:27.452 +05:30 INF] UserManagement.API.Data.Repositories.UserManagementRepository Validating user credentials for username: admin@example.com
+[2025-06-28 11:17:27.454 +05:30 INF] UserManagement.API.Data.Repositories.UserManagementRepository Retrieving user by username: admin@example.com
+[2025-06-28 11:17:27.457 +05:30 DBG] UserManagement.API.Data.SqlDataAccess Executing query: SELECT * FROM Users WHERE Username = 'admin@example.com'
+[2025-06-28 11:17:27.520 +05:30 DBG] UserManagement.API.Data.SqlDataAccess Query executed successfully, returned 1 rows
+[2025-06-28 11:17:27.523 +05:30 INF] UserManagement.API.Data.Repositories.UserManagementRepository User found by username: admin@example.com, ID: 1
+[2025-06-28 11:17:27.799 +05:30 INF] UserManagement.API.Data.Repositories.UserManagementRepository User credentials validated successfully: admin@example.com
+[2025-06-28 11:17:27.801 +05:30 INF] UserManagement.API.Services.TokenService Generating JWT token for user: admin@example.com, Role: Admin
+[2025-06-28 11:17:27.833 +05:30 INF] UserManagement.API.Services.TokenService JWT token generated successfully for user: admin@example.com
+[2025-06-28 11:17:27.837 +05:30 INF] UserManagement.API.Controllers.UserController Successful login for username: admin@example.com, Role: Admin
+[2025-06-28 11:17:27.851 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware Handled POST /api/user/login responded 200 in 691.3837 ms
+[2025-06-28 11:17:27.928 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware Handled OPTIONS /api/user/paginated responded 204 in 1.4632 ms
+[2025-06-28 11:17:27.928 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware Handled OPTIONS /api/user/paginated responded 204 in 0.0770 ms
+[2025-06-28 11:17:28.028 +05:30 INF] UserManagement.API.Controllers.UserController GetUsers paginated requested by user: admin@example.com, Page: 1, PageSize: 10, SearchTerm: null
+[2025-06-28 11:17:28.032 +05:30 INF] UserManagement.API.Data.Repositories.UserManagementRepository Retrieving paginated users: Page 1, PageSize 10, SearchTerm: null, SortBy: Id
+[2025-06-28 11:17:28.034 +05:30 DBG] UserManagement.API.Data.SqlDataAccess Executing single value query: SELECT COUNT(*) FROM Users 
+[2025-06-28 11:17:28.082 +05:30 DBG] UserManagement.API.Data.SqlDataAccess Single value query executed successfully, result: 13
+[2025-06-28 11:17:28.085 +05:30 DBG] UserManagement.API.Data.SqlDataAccess Executing query: 
+                    SELECT * FROM Users 
+                    
+                    ORDER BY Id ASC
+                    OFFSET 0 ROWS
+                    FETCH NEXT 10 ROWS ONLY
+[2025-06-28 11:17:28.130 +05:30 DBG] UserManagement.API.Data.SqlDataAccess Query executed successfully, returned 10 rows
+[2025-06-28 11:17:28.133 +05:30 INF] UserManagement.API.Data.Repositories.UserManagementRepository Retrieved 10 users out of 13 total (Page 1 of 2)
+[2025-06-28 11:17:28.137 +05:30 INF] UserManagement.API.Controllers.UserController Retrieved 10 users (Page 1 of 2) for user: admin@example.com
+[2025-06-28 11:17:28.153 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware Handled GET /api/user/paginated responded 200 in 220.2365 ms
+[2025-06-28 11:17:28.184 +05:30 INF] UserManagement.API.Controllers.UserController GetUsers paginated requested by user: admin@example.com, Page: 1, PageSize: 10, SearchTerm: null
+[2025-06-28 11:17:28.187 +05:30 INF] UserManagement.API.Data.Repositories.UserManagementRepository Retrieving paginated users: Page 1, PageSize 10, SearchTerm: null, SortBy: Id
+[2025-06-28 11:17:28.190 +05:30 DBG] UserManagement.API.Data.SqlDataAccess Executing single value query: SELECT COUNT(*) FROM Users 
+[2025-06-28 11:17:28.210 +05:30 DBG] UserManagement.API.Data.SqlDataAccess Single value query executed successfully, result: 13
+[2025-06-28 11:17:28.211 +05:30 DBG] UserManagement.API.Data.SqlDataAccess Executing query: 
+                    SELECT * FROM Users 
+                    
+                    ORDER BY Id ASC
+                    OFFSET 0 ROWS
+                    FETCH NEXT 10 ROWS ONLY
+[2025-06-28 11:17:28.226 +05:30 DBG] UserManagement.API.Data.SqlDataAccess Query executed successfully, returned 10 rows
+[2025-06-28 11:17:28.227 +05:30 INF] UserManagement.API.Data.Repositories.UserManagementRepository Retrieved 10 users out of 13 total (Page 1 of 2)
+[2025-06-28 11:17:28.229 +05:30 INF] UserManagement.API.Controllers.UserController Retrieved 10 users (Page 1 of 2) for user: admin@example.com
+[2025-06-28 11:17:28.231 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware Handled GET /api/user/paginated responded 200 in 68.5057 ms
+[2025-06-28 11:17:28.449 +05:30 INF] UserManagement.API.Controllers.UserController GetUsers paginated requested by user: admin@example.com, Page: 1, PageSize: 10, SearchTerm: null
+[2025-06-28 11:17:28.452 +05:30 INF] UserManagement.API.Data.Repositories.UserManagementRepository Retrieving paginated users: Page 1, PageSize 10, SearchTerm: null, SortBy: Id
+[2025-06-28 11:17:28.455 +05:30 DBG] UserManagement.API.Data.SqlDataAccess Executing single value query: SELECT COUNT(*) FROM Users 
+[2025-06-28 11:17:28.476 +05:30 DBG] UserManagement.API.Data.SqlDataAccess Single value query executed successfully, result: 13
+[2025-06-28 11:17:28.477 +05:30 DBG] UserManagement.API.Data.SqlDataAccess Executing query: 
+                    SELECT * FROM Users 
+                    
+                    ORDER BY Id ASC
+                    OFFSET 0 ROWS
+                    FETCH NEXT 10 ROWS ONLY
+[2025-06-28 11:17:28.500 +05:30 DBG] UserManagement.API.Data.SqlDataAccess Query executed successfully, returned 10 rows
+[2025-06-28 11:17:28.502 +05:30 INF] UserManagement.API.Data.Repositories.UserManagementRepository Retrieved 10 users out of 13 total (Page 1 of 2)
+[2025-06-28 11:17:28.505 +05:30 INF] UserManagement.API.Controllers.UserController Retrieved 10 users (Page 1 of 2) for user: admin@example.com
+[2025-06-28 11:17:28.507 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware Handled GET /api/user/paginated responded 200 in 75.5852 ms
+[2025-06-28 11:17:43.492 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware Handled OPTIONS /api/user/5 responded 204 in 0.2114 ms
+[2025-06-28 11:17:43.523 +05:30 INF] UserManagement.API.Controllers.UserController UpdateUser requested by admin: admin@example.com, for user ID: 5
+[2025-06-28 11:17:43.527 +05:30 INF] UserManagement.API.Data.Repositories.UserManagementRepository Retrieving user by ID: 5
+[2025-06-28 11:17:43.530 +05:30 DBG] UserManagement.API.Data.SqlDataAccess Executing query: SELECT * FROM Users WHERE Id = '5'
+[2025-06-28 11:17:43.559 +05:30 DBG] UserManagement.API.Data.SqlDataAccess Query executed successfully, returned 1 rows
+[2025-06-28 11:17:43.560 +05:30 INF] UserManagement.API.Data.Repositories.UserManagementRepository User found by ID: 5, Username: preeti@gmail.com
+[2025-06-28 11:17:43.562 +05:30 INF] UserManagement.API.Data.Repositories.UserManagementRepository Updating user: ID 5, Username: preeti@gmail.com
+[2025-06-28 11:17:43.565 +05:30 DBG] UserManagement.API.Data.SqlDataAccess Executing save query: 
+                UPDATE Users SET
+                Username = 'preeti@gmail.com',
+                PasswordHash = '$2a$11$htyvWMNb9eYlCxXUes9lX.eyYgi.HXwL6outfDaALHQ8y3DDAjhuK',
+                Role = 'User',
+                Name = 'Preeti Singh JK',
+                Description = 'I am preeti, contact for funding needs.'
+                 WHERE Id = 5
+[2025-06-28 11:17:43.630 +05:30 DBG] UserManagement.API.Data.SqlDataAccess Save query executed successfully, 1 rows affected
+[2025-06-28 11:17:43.632 +05:30 INF] UserManagement.API.Data.Repositories.UserManagementRepository User updated successfully: ID 5, Username: preeti@gmail.com
+[2025-06-28 11:17:43.634 +05:30 INF] UserManagement.API.Controllers.UserController User updated successfully: ID 5, Username: preeti@gmail.com by admin: admin@example.com
+[2025-06-28 11:17:43.638 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware Handled PUT /api/user/5 responded 200 in 140.7271 ms
+[2025-06-28 11:17:43.643 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware Handled OPTIONS /api/user/paginated responded 204 in 0.0743 ms
+[2025-06-28 11:17:43.671 +05:30 INF] UserManagement.API.Controllers.UserController GetUsers paginated requested by user: admin@example.com, Page: 1, PageSize: 10, SearchTerm: null
+[2025-06-28 11:17:43.674 +05:30 INF] UserManagement.API.Data.Repositories.UserManagementRepository Retrieving paginated users: Page 1, PageSize 10, SearchTerm: null, SortBy: Id
+[2025-06-28 11:17:43.676 +05:30 DBG] UserManagement.API.Data.SqlDataAccess Executing single value query: SELECT COUNT(*) FROM Users 
+[2025-06-28 11:17:43.718 +05:30 DBG] UserManagement.API.Data.SqlDataAccess Single value query executed successfully, result: 13
+[2025-06-28 11:17:43.720 +05:30 DBG] UserManagement.API.Data.SqlDataAccess Executing query: 
+                    SELECT * FROM Users 
+                    
+                    ORDER BY Id ASC
+                    OFFSET 0 ROWS
+                    FETCH NEXT 10 ROWS ONLY
+[2025-06-28 11:17:43.743 +05:30 DBG] UserManagement.API.Data.SqlDataAccess Query executed successfully, returned 10 rows
+[2025-06-28 11:17:43.745 +05:30 INF] UserManagement.API.Data.Repositories.UserManagementRepository Retrieved 10 users out of 13 total (Page 1 of 2)
+[2025-06-28 11:17:43.747 +05:30 INF] UserManagement.API.Controllers.UserController Retrieved 10 users (Page 1 of 2) for user: admin@example.com
+[2025-06-28 11:17:43.749 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware Handled GET /api/user/paginated responded 200 in 101.7572 ms
