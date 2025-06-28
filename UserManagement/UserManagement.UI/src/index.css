@@ -1,0 +1,33 @@
+/* Reset default styles to avoid conflicts with Material-UI */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* RTL Support for Arabic */
+[dir="rtl"] body {
+  font-family: 'Segoe UI', 'Tahoma', 'Arial', sans-serif;
+}
+
+/* Ensure proper text alignment for RTL */
+[dir="rtl"] .MuiTableCell-root {
+  text-align: right;
+}
+
+[dir="ltr"] .MuiTableCell-root {
+  text-align: left;
+}
+
+
