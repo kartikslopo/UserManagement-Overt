@@ -34,7 +34,7 @@ The User Management System is a full-stack application built with .NET 8 backend
 
 The login page provides a clean, professional interface for user authentication.
 
-![Login Page English](UserManagement/Screenshots/loginpage.png)
+![Login Page English](Screenshots/loginpage.png)
 
 **Features:**
 - Clean Material-UI design
@@ -47,7 +47,7 @@ The login page provides a clean, professional interface for user authentication.
 
 The application fully supports Arabic with right-to-left (RTL) layout.
 
-![Login Page Arabic](UserManagement/Screenshots/loginpage-arabic.png)
+![Login Page Arabic](Screenshots/loginpage-arabic.png)
 
 **RTL Features:**
 - Complete right-to-left layout
@@ -59,7 +59,7 @@ The application fully supports Arabic with right-to-left (RTL) layout.
 
 Users can easily switch between English and Arabic directly from the login page.
 
-![Login Arabic Switch](UserManagement/Screenshots/loginarabicswitch.png)
+![Login Arabic Switch](Screenshots/loginarabicswitch.png)
 
 **Language Switch Features:**
 - Instant language switching
@@ -75,7 +75,7 @@ Users can easily switch between English and Arabic directly from the login page.
 
 The application supports seamless language switching throughout the interface.
 
-![English Arabic Switch](UserManagement/Screenshots/english-arabic-switch.png)
+![English Arabic Switch](Screenshots/english-arabic-switch.png)
 
 **Internationalization Features:**
 - Complete UI translation
@@ -88,7 +88,7 @@ The application supports seamless language switching throughout the interface.
 
 All dashboard interfaces are fully translated and support RTL layout.
 
-![Arabic Dashboard](UserManagement/Screenshots/arabic-dashboard.png)
+![Arabic Dashboard](Screenshots/arabic-dashboard.png)
 
 **Arabic Interface Features:**
 - Complete Arabic translation
@@ -105,7 +105,7 @@ All dashboard interfaces are fully translated and support RTL layout.
 
 The admin dashboard provides comprehensive user management capabilities.
 
-![Admin Dashboard](UserManagement/Screenshots/dashboard-admin.png)
+![Admin Dashboard](Screenshots/dashboard-admin.png)
 
 **Admin Dashboard Features:**
 - **User Table**: Complete list of all system users
@@ -128,7 +128,7 @@ The admin dashboard provides comprehensive user management capabilities.
 
 The application supports multiple themes including a light theme option.
 
-![Dashboard Light Theme](UserManagement/Screenshots/dashboard-light-theme.png)
+![Dashboard Light Theme](Screenshots/dashboard-light-theme.png)
 
 **Light Theme Features:**
 - Clean, bright interface
@@ -145,7 +145,7 @@ The application supports multiple themes including a light theme option.
 
 Admins can easily add new users through a comprehensive form interface.
 
-![Sample User Addition](UserManagement/Screenshots/sample-useraddition-task.png)
+![Sample User Addition](Screenshots/sample-useraddition-task.png)
 
 **Add User Features:**
 - **User Information Form**:
@@ -162,7 +162,7 @@ Admins can easily add new users through a comprehensive form interface.
 
 The application implements efficient server-side pagination for handling large user datasets.
 
-![Pagination System](UserManagement/Screenshots/pagination.png)
+![Pagination System](Screenshots/pagination.png)
 
 **Pagination Features:**
 - **Server-side Processing**: Efficient data loading
@@ -186,7 +186,7 @@ The application implements efficient server-side pagination for handling large u
 
 The application supports multiple themes with easy switching capabilities.
 
-![Theme Switch](UserManagement/Screenshots/theme-switch.png)
+![Theme Switch](Screenshots/theme-switch.png)
 
 **Theme Features:**
 - **Dark Theme**: Professional dark interface
@@ -209,7 +209,7 @@ The application supports multiple themes with easy switching capabilities.
 
 The system implements secure password hashing using BCrypt for all user accounts.
 
-![Database with Hashed Passwords](UserManagement/Screenshots/db-with-hashed-pwd.png)
+![Database with Hashed Passwords](Screenshots/db-with-hashed-pwd.png)
 
 **Security Features:**
 - **BCrypt Hashing**: Industry-standard password security
@@ -380,17 +380,5 @@ The application is fully responsive and works across all device sizes:
 - Clear browser cache if needed
 - Check network connection for API calls
 
----
-
-## 📞 Support & Documentation
-
-For additional help:
-
-1. **Check Screenshots**: Review this documentation for visual guidance
-2. **Read README**: Consult README.md for technical setup
-3. **API Documentation**: Use Swagger UI for API details
-4. **Application Logs**: Check logs folder for error details
-
----
 
 **🎯 This documentation provides a complete visual guide to all system features and capabilities. Each screenshot demonstrates real functionality and can be used as a reference for understanding the application's capabilities.**
